@@ -18,7 +18,7 @@ CREATE TABLE avaliacoes (
     mensagem				VARCHAR(255),
     data_avaliacao			DATE,
     qtd_estrelas			INT,
-    fk_empresa				INT,
+    fk_empresa				INT
     -- FOREIGN KEY (fk_empresa) REFERENCES empresas (id_empresa)
     );
     
@@ -30,7 +30,7 @@ CREATE TABLE operacoes (
     tel_gerente				VARCHAR(15),
     email_gerente			VARCHAR(50),
     senha_gerente			VARCHAR(45),
-    fk_empresa				INT,
+    fk_empresa				INT
     -- FOREIGN KEY (fk_empresa) REFERENCES empresas (id_empresa)
     );
     
@@ -39,7 +39,7 @@ CREATE TABLE maquinas (
     hostname				VARCHAR(45),
     serial_maquina			VARCHAR(45),
     localidade_maquina		VARCHAR(30),
-    fk_operacao				INT,
+    fk_operacao				INT
     -- FOREIGN KEY (fk_operacao) REFERENCES operacoes (id_operacao)
     );
 
@@ -47,7 +47,7 @@ CREATE TABLE log_cliques (
 	id_clique 				INT PRIMARY KEY AUTO_INCREMENT,
     cliques					VARCHAR(15),
     data_clique				DATE,
-    fk_maquina				INT,
+    fk_maquina				INT
     -- FOREIGN KEY (fk_maquina) REFERENCES maquinas (id_maquina)
     );
     
@@ -61,7 +61,7 @@ CREATE TABLE log_registros (
     uso						DOUBLE,
     disponivel				DOUBLE,
     frequencia				DOUBLE,
-    fk_componente			INT,
+    fk_componente			INT
     -- FOREIGN KEY (fk_componente) REFERENCES componentes (id_componente),
     -- fk_maquina				INT,
     -- FOREIGN KEY (fk_maquina) REFERENCES maquinas (id_maquina),
@@ -72,6 +72,6 @@ CREATE TABLE log_alertas (
 	id_log_alerta			INT PRIMARY KEY AUTO_INCREMENT,
     codigo_urgencia			VARCHAR(15),
     descricao				VARCHAR(255),
-    fk_registro				INT,
+    fk_registro				INT
     -- FOREIGN KEY (fk_registro) REFERENCES log_registros (id_log_registro)
     );
