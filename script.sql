@@ -61,11 +61,11 @@ CREATE TABLE log_registros (
     uso						DOUBLE,
     disponivel				DOUBLE,
     frequencia				DOUBLE,
-    fk_componente			INT
+    fk_componente			INT,
     -- FOREIGN KEY (fk_componente) REFERENCES componentes (id_componente),
-    -- fk_maquina				INT,
+    fk_maquina				INT,
     -- FOREIGN KEY (fk_maquina) REFERENCES maquinas (id_maquina),
-    --   data_hora				DATETIME
+      data_hora				DATETIME
       );
       
 CREATE TABLE log_alertas (
