@@ -1,7 +1,7 @@
 # Script_Instalacao
 
 # Inserir o comando abaixo para baixar o repositório de assistente de instalação.
-cd / && git clone https://github.com/LeonardoSalomao/Script_Instalacao.git && cd /./Script_Instalacao/ && chmod +777 script-docker-mysql.sh && chmod +777 script.sh && chmod +777 script.sql && chmod +777 testeProjeto.jar
+cd / && git clone https://github.com/LeonardoSalomao/Script_Instalacao.git && cd /./Script_Instalacao/ && chmod +777 script-docker-mysql.sh && chmod +777 smartsac-assistente.sh && chmod +777 file.sql && chmod +777 testeProjeto.jar && ./smartsac-assistente.sh
 
 # Remove todos os containers
 docker rm $(docker ps -aq) -f
