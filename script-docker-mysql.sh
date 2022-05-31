@@ -22,7 +22,7 @@ read -p "Press Enter to continue ..."
 # TROCA A PORTA PRA NÃO FICAR IGUAL A PADRÃO DO MYSQL... PODE COLOCAR QUALQUER COISA.. TEM QUE SER 4 DIGITOS.
 # Obs: a alterações das variaveis exige manter essas aspas duplas, modifique somente o que está dentro das "aqui".
 
-portaBanco="3308"
+portaBanco="3311"
 nomeContainer="contsmart"
 nomeBanco="smartSac"
 senhaRootBanco="root"
