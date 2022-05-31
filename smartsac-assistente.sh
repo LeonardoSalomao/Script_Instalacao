@@ -9,7 +9,7 @@ menu() {
         echo "          SMART-SAC INSTALACAO / MENU DE USO"
         echo
         # echo "                 1 - INICIAR Smart Sac CLI"
-        echo "                 2 - INICIAR Smart Sac GUI"
+        echo "                 1 - INICIAR Smart Sac GUI"
         echo
         echo "             exit  -  Sair do assistente"
         echo
@@ -26,6 +26,23 @@ menu() {
         sleep 1
 
         case "$x" in
+
+        1) # INICIA O DOCKER
+            clear
+            cd /./Script_Instalacao/
+            echo "       INICIANDO SMART-SAC..."
+            clear
+            echo
+            echo " ESTE É APENAS UM CONSOLE PARA VISUALIZAR OS REGISTROS"
+            echo
+            java -jar testeProjeto.jar
+            sleep 5
+            clear
+            echo
+            echo "         FECHANDO GUI SMART SAC"
+            echo "        VOLTANDO PARA MENU ASSISTENTE..."
+            sleep 5
+            ;;
         instalar) # INSTALAÇÃO
             clear
             echo "Atualizando pacotes do sistema(1/4)"
@@ -87,7 +104,7 @@ menu() {
             clear
             echo
             echo "       DOCKER INICIADO COM SUCESSO"
-            echo "        VOLTANDO PARA ASSISTENTE..."
+            echo "        VOLTANDO PARA MENU ASSISTENTE..."
             sleep 5
             ;;
         rm-docker) # REMOVER CONTAINERS
@@ -105,7 +122,7 @@ menu() {
             sleep 5
             mysql -h localhost -uroot -proot smart_sac
             echo
-            echo "    SAINDO DO MYSQL E VOLTANDO PARA ASSISTENTE"
+            echo "    SAINDO DO MYSQL E VOLTANDO PARA MENU ASSISTENTE"
             sleep 5
             ;;
         exit) # SAIR
