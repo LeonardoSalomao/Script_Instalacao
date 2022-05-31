@@ -99,12 +99,12 @@ menu() {
             clear
             cd /./Script_Instalacao/
             source ./script-docker-mysql.sh
-            sleep 5
+            sleep 3
             clear
             echo
             echo "       DOCKER INICIADO COM SUCESSO"
             echo "        VOLTANDO PARA MENU ASSISTENTE..."
-            sleep 5
+            sleep 3
             ;;
         remover-docker) # REMOVER CONTAINERS
             clear
@@ -112,20 +112,22 @@ menu() {
             echo
             echo "    CONTAINERS REMOVIDOS COM SUCESSO"
             echo "        VOLTANDO PARA ASSISTENTE..."
-            sleep 5
+            sleep 3
             ;;
         iniciar-mysql) # INTERAGIR COM MYSQL BASH
             clear
             echo
             echo "    COMEÇANDO A INTERAGIR COM MYSQL - DOCKER"
-            sleep 5
+            sleep 3
             mysql -h localhost -uroot -proot smart_sac
             echo
             echo "    SAINDO DO MYSQL E VOLTANDO PARA MENU ASSISTENTE"
-            sleep 5
+            sleep 3
             ;;
         exit) # SAIR
             clear
+            echo
+            echo "    OBRIGADO POR UTILIZAR SMART SAC"
             exit 0
             ;;
         *)

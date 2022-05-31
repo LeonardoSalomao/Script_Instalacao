@@ -24,7 +24,7 @@ read -p "Press Enter to continue ..."
 
 portaBanco="3311"
 nomeContainer="contsmart"
-nomeBanco="smartSac"
+nomeBanco="smart_sac"
 senhaRootBanco="root"
 userBanco="urubu100"
 senhaUserBanco="urubu100"
@@ -44,7 +44,7 @@ read -p "Press Enter to continue ..."
 file_sql="file.sql"
 
 # COMANDO DOCKER PARA INSERIR
-docker exec -i $nomeContainer sh -c 'exec mysql -uroot -proot smartSac' < "$file_sql"
+docker exec -i $nomeContainer sh -c 'exec mysql -uroot -proot smart_sac' < "$file_sql"
 
 #
 # "===  FIM DO SCRIPT 'script-docker-mysql.sh', OBRIGADO. ==="
