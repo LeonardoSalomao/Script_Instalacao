@@ -11,13 +11,17 @@ menu() {
         # echo "                 1 - INICIAR Smart Sac CLI"
         echo "                 1 - INICIAR Smart Sac GUI"
         echo
-        echo "             exit  -  Sair do assistente"
+        echo "    --------------------------------------------------"
         echo
-        echo "    ------------------------------------------------"
         echo "          instalar - Instalar Smart Sac"
         echo "    iniciar-docker - Iniciar Containers Docker"
         echo "    remover-docker - Remover todos os Containers"
-        echo "     iniciar-mysql - Iniciar MySQL (Docker)"
+        echo "      it-container - Interagir com Container(Docker)"
+        echo
+        echo "    --------------------------------------------------"
+        echo
+        echo "             sair  -  Sair do assistente"
+        echo
         echo
         echo "Digite uma opcao:"
         read x
@@ -114,17 +118,17 @@ menu() {
             echo "        VOLTANDO PARA ASSISTENTE..."
             sleep 3
             ;;
-        iniciar-mysql) # INTERAGIR COM MYSQL BASH
+        it-container) # INTERAGIR COM MYSQL BASH
             clear
             echo
             echo "    COMEÇANDO A INTERAGIR COM MYSQL - DOCKER"
             sleep 3
-            mysql -h localhost -uroot -proot smart_sac
+            docker exec -it contsmart bash
             echo
-            echo "    SAINDO DO MYSQL E VOLTANDO PARA MENU ASSISTENTE"
+            echo "    SAINDO DO MYSQL - DOCKER E VOLTANDO PARA MENU ASSISTENTE"
             sleep 3
             ;;
-        exit) # SAIR
+        sair) # SAIR
             clear
             echo
             echo "    OBRIGADO POR UTILIZAR SMART SAC"
