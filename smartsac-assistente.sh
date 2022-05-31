@@ -14,11 +14,10 @@ menu() {
         echo "             exit  -  Sair do assistente"
         echo
         echo "    ------------------------------------------------"
-        echo "          instalar - Inatalar Smart Sac"
-        echo "      start-docker - Iniciar Containers Docker"
-        echo "         rm-docker - Remover todos os Containers"
-        echo "          instalar - Instalar Smart-Sac Completo"
-        echo "      start-docker - Iniciar Docker Completo"
+        echo "          instalar - Instalar Smart Sac"
+        echo "    iniciar-docker - Iniciar Containers Docker"
+        echo "    remover-docker - Remover todos os Containers"
+        echo "     iniciar-mysql - Iniciar MySQL (Docker)"
         echo
         echo "Digite uma opcao:"
         read x
@@ -96,7 +95,7 @@ menu() {
             echo "Instalação efetuada com sucesso!"
             read -p "Pressione Enter para continuar"
             ;;
-        start-docker) # INICIA O DOCKER
+        iniciar-docker) # INICIA O DOCKER
             clear
             cd /./Script_Instalacao/
             source ./script-docker-mysql.sh
@@ -107,7 +106,7 @@ menu() {
             echo "        VOLTANDO PARA MENU ASSISTENTE..."
             sleep 5
             ;;
-        rm-docker) # REMOVER CONTAINERS
+        remover-docker) # REMOVER CONTAINERS
             clear
             docker rm $(docker ps -aq) -f
             echo
@@ -115,7 +114,7 @@ menu() {
             echo "        VOLTANDO PARA ASSISTENTE..."
             sleep 5
             ;;
-        start-mysql) # INTERAGIR COM MYSQL BASH
+        iniciar-mysql) # INTERAGIR COM MYSQL BASH
             clear
             echo
             echo "    COMEÇANDO A INTERAGIR COM MYSQL - DOCKER"
